@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pf-favicon" x1="9" y1="9" x2="53" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B7F37A" />
+      <stop offset="100%" stop-color="#2ED3A8" />
+    </linearGradient>
+  </defs>
+  <rect x="9" y="10" width="9" height="9" rx="2" fill="url(#pf-favicon)" />
+  <circle cx="14" cy="39" r="5" fill="url(#pf-favicon)" />
+  <rect x="23" y="24" width="9" height="9" rx="2" fill="url(#pf-favicon)" />
+  <path d="M18 15H29V24" stroke="url(#pf-favicon)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M14 34V29H23" stroke="url(#pf-favicon)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M32 29H41" stroke="url(#pf-favicon)" stroke-width="3" stroke-linecap="round" />
+  <path d="M38 25L44 29L38 33" stroke="url(#pf-favicon)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <g transform="translate(41 17)">
+    <path d="M0 5L7 1L14 5L7 9Z" fill="url(#pf-favicon)" />
+    <path d="M0 11L7 7L14 11L7 15Z" fill="url(#pf-favicon)" opacity="0.78" />
+    <path d="M0 17L7 13L14 17L7 21Z" fill="url(#pf-favicon)" opacity="0.58" />
+  </g>
+</svg>

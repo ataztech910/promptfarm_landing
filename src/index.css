@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 226 63% 5%;
+    --foreground: 214 29% 97%;
+
+    --card: 225 49% 8%;
+    --card-foreground: 214 29% 97%;
+
+    --popover: 225 49% 8%;
+    --popover-foreground: 214 29% 97%;
+
+    --primary: 106 86% 68%;
+    --primary-foreground: 226 63% 5%;
+
+    --secondary: 225 34% 11%;
+    --secondary-foreground: 215 20% 65%;
+
+    --muted: 224 28% 14%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 163 66% 50%;
+    --accent-foreground: 226 63% 5%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 22% 18%;
+    --input: 222 22% 18%;
+    --ring: 106 86% 68%;
+
+    --radius: 0.5rem;
+
+    --surface-elevated: 225 38% 10%;
+    --text-tertiary: 220 18% 48%;
+    --text-secondary: 215 20% 65%;
+    --accent-glow: 163 66% 50%;
+    --success: 106 86% 68%;
+    --error: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top center, hsl(var(--accent) / 0.12), transparent 30%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(225 49% 7%));
+    font-family: 'Geist Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer utilities {
+  .tracking-display {
+    letter-spacing: -0.04em;
+  }
+
+  .font-mono-app {
+    font-family: 'Geist Mono', 'SF Mono', 'Fira Code', monospace;
+  }
+
+  .grid-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}

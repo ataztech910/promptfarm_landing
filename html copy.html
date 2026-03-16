@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptFarm Icons</title>
+  <style>
+    :root{
+      --bg:#050816;
+      --panel:#0B1020;
+      --stroke:rgba(255,255,255,0.08);
+      --text:#F5F7FA;
+      --muted:#94A3B8;
+      --green:#8EF46A;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      padding:40px;
+    }
+
+    h1{
+      margin:0 0 24px;
+      font-size:28px;
+      letter-spacing:-0.04em;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--panel);
+      border:1px solid var(--stroke);
+      border-radius:20px;
+      padding:24px;
+    }
+
+    .label{
+      margin-top:16px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .demo{
+      min-height:140px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .mono-demo{
+      color:var(--green);
+    }
+  </style>
+</head>
+<body>
+  <h1>PromptFarm icon set</h1>
+
+  <div class="grid">
+    <div class="card">
+      <div class="demo mono-demo">
+        <svg width="128" height="128" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="PromptFarm mono icon">
+          <g fill="currentColor" stroke="currentColor">
+            <rect x="28" y="28" width="64" height="64" rx="10" fill="currentColor" stroke="none"/>
+            <circle cx="60" cy="204" r="32" fill="currentColor" stroke="none"/>
+            <path d="M104 60 H156 V108" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M60 172 V126 H140" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <rect x="128" y="96" width="52" height="52" rx="10" fill="currentColor" stroke="none"/>
+            <path d="M180 122 H230" stroke-width="16" stroke-linecap="round" fill="none"/>
+            <path d="M214 104 L242 122 L214 140" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <g transform="translate(208 62)">
+              <path d="M0 24 L46 0 L92 24 L46 48 Z" stroke="none"/>
+              <path d="M0 58 L46 34 L92 58 L46 82 Z" stroke="none" opacity="0.78"/>
+              <path d="M0 92 L46 68 L92 92 L46 116 Z" stroke="none" opacity="0.58"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="label">Monochrome</div>
+    </div>
+
+    <div class="card">
+      <div class="demo">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="PromptFarm small icon">
+          <defs>
+            <linearGradient id="pfS" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#B7F37A"/>
+              <stop offset="100%" stop-color="#2ED3A8"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="8" width="12" height="12" rx="2.5" fill="url(#pfS)"/>
+          <circle cx="14" cy="41" r="6" fill="url(#pfS)"/>
+          <rect x="24" y="24" width="10" height="10" rx="2" fill="url(#pfS)"/>
+          <path d="M20 14 H29 V24" stroke="url(#pfS)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 35 V29 H24" stroke="url(#pfS)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M34 29 H42" stroke="url(#pfS)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M39 25 L46 29 L39 33" fill="none" stroke="url(#pfS)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <g transform="translate(43 18)">
+            <path d="M0 5 L7 1 L14 5 L7 9 Z" fill="url(#pfS)"/>
+            <path d="M0 11 L7 7 L14 11 L7 15 Z" fill="url(#pfS)" opacity="0.8"/>
+            <path d="M0 17 L7 13 L14 17 L7 21 Z" fill="url(#pfS)" opacity="0.6"/>
+          </g>
+        </svg>
+      </div>
+      <div class="label">Ultra-small / favicon</div>
+    </div>
+
+    <div class="card">
+      <div class="demo">
+        <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="PromptFarm minimal icon v2">
+          <defs>
+            <linearGradient id="pfMinimal" x1="18" y1="18" x2="106" y2="108" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#B7F37A"/>
+              <stop offset="100%" stop-color="#2ED3A8"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="20" width="18" height="18" rx="4" fill="url(#pfMinimal)"/>
+          <circle cx="28" cy="78" r="10" fill="url(#pfMinimal)"/>
+          <rect x="46" y="48" width="18" height="18" rx="4" fill="url(#pfMinimal)"/>
+          <path d="M36 29 H58 V48" stroke="url(#pfMinimal)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 68 V57 H46" stroke="url(#pfMinimal)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M64 57 H82" stroke="url(#pfMinimal)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M76 50 L88 57 L76 64" fill="none" stroke="url(#pfMinimal)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <g transform="translate(82 34)">
+            <path d="M0 10 L14 3 L28 10 L14 17 Z" fill="url(#pfMinimal)"/>
+            <path d="M0 22 L14 15 L28 22 L14 29 Z" fill="url(#pfMinimal)" opacity="0.78"/>
+            <path d="M0 34 L14 27 L28 34 L14 41 Z" fill="url(#pfMinimal)" opacity="0.58"/>
+          </g>
+        </svg>
+      </div>
+      <div class="label">Minimal v2</div>
+    </div>
+  </div>
+</body>
+</html>
