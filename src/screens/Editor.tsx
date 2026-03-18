@@ -40,12 +40,11 @@ const Editor = () => {
                 ]}
             />
 
-            <div>
-                <CopyCompiledButton
-                        blocks={blocks}       // PromptWorkspaceBlock[]
-                         // optional — extra class on the button
-                />
-            <pre style={{ padding: "1.5rem", overflowY: "auto", whiteSpace: "pre-wrap" }}>
+            <div className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/4 relative">
+                <div className="absolute top-2 right-2 ">
+                        <CopyCompiledButton blocks={blocks} />
+                </div>
+            <pre className="mt-4 whitespace-pre-wrap break-words">
                 {compiled.text || "← Start writing on the left"}
             </pre>
             </div>
