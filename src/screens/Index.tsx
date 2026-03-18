@@ -20,7 +20,7 @@ const EmailCapture = ({ buttonText = "Join Early Access" }: { buttonText?: strin
   const [submittedName, setSubmittedName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
-  const formActionUrl = import.meta.env.VITE_FORMSPARK_ACTION_URL;
+  const formActionUrl = process.env.NEXT_PUBLIC_FORMSPARK_ACTION_URL;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const REPO_URL = "https://github.com/ataztech910/promptfarm";
 export const CHANGELOG_URL = "https://github.com/ataztech910/promptfarm/commits/master";
@@ -39,7 +39,7 @@ export const BrandMark = ({ className = "" }: { className?: string }) => (
 export const SiteHeader = () => (
   <nav className="fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-md">
     <Container className="h-16 flex items-center justify-between">
-      <Link to="/" className="flex items-center gap-3 font-bold text-xl tracking-display leading-none">
+      <Link href="/" className="flex items-center gap-3 font-bold text-xl tracking-display leading-none">
         <BrandMark className="h-8 w-8 shrink-0 mt-1" />
         <span className="ml-[-10px]">
           <span className="text-foreground">Prompt</span>
@@ -47,9 +47,9 @@ export const SiteHeader = () => (
         </span>
       </Link>
       <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-        {/* <Link to="/docs" className="hover:text-foreground transition-colors">Documentation</Link> */}
-        <Link to="/changelog" className="hover:text-foreground transition-colors">Changelog</Link>
-        <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+        {/* <Link href="/docs" className="hover:text-foreground transition-colors">Documentation</Link> */}
+        <Link href="/changelog" className="hover:text-foreground transition-colors">Changelog</Link>
+        <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
       </div>
     </Container>
   </nav>
@@ -62,9 +62,9 @@ export const SiteFooter = () => (
         © 2026 PromptFarm. Built for the agentic era.
       </div>
       <div className="flex gap-6 text-text-tertiary text-xs font-mono-app">
-        <Link to="/changelog" className="hover:text-foreground transition-colors">Changelog</Link>
+        <Link href="/changelog" className="hover:text-foreground transition-colors">Changelog</Link>
         <a href={REPO_URL} target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">GitHub</a>
-        <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+        <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
       </div>
     </Container>
   </footer>
