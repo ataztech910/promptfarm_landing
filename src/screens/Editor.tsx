@@ -1,19 +1,33 @@
-import { Container, SiteFooter, SiteHeader, CHANGELOG_URL, REPO_URL } from "@/components/SiteShell";
+"use client";
+
+import { Container, SiteFooter, SiteHeader } from "@/components/SiteShell";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { useState } from "react";
 import {
-  PromptBlockEditor,
-  usePromptCompiler,
-  createPromptWorkspaceBlock,
-  CopyCompiledButton,
+  CompiledOutput,
+  EditorSegment,
+  PromptEditor,
+  useCompiledText,
+  Variable,
+  VariablesBar,
 } from "@promptfarm/prompt-editor";
 import "@promptfarm/prompt-editor/styles.css";
 
-
 const Editor = () => {
-  const [blocks, setBlocks] = useState(() => [
-    createPromptWorkspaceBlock("prompt"),
-  ]);
-  const compiled = usePromptCompiler(blocks);
+  const [segments, setSegments] = useState<EditorSegment[]>([]);
+  const [variables, setVariables] = useState<Variable[]>([]);
+  const [isRunDialogOpen, setIsRunDialogOpen] = useState(false);
+  const [runOutput, setRunOutput] = useState("");
+
+  const compiledText = useCompiledText(segments, variables);
 
   return (<div className="min-h-screen">
     <SiteHeader />
@@ -24,35 +38,52 @@ const Editor = () => {
           <h1 className="mb-6 text-4xl font-bold tracking-display md:text-6xl">
             Use real logic to produce your prompts, without leaving the editor.
           </h1>
-         
+
         </Container>
       </section>
       <section className="py-16">
-        
-        <Container className="grid gap-6 md:grid-cols-2">
-           
-          {/* <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", height: "100vh" }}> */}
-            <PromptBlockEditor blocks={blocks} onChange={setBlocks} 
-                genericRoleOptions={[  // optional — custom roles for the generic block dropdown
-                    { name: "analyst",  description: "You are an analyst, your job is to analyze data" },
-                    { name: "reviewer", description: "You are a code reviewer focused on quality" },
-                    { name: "editor",   description: "You are an editor improving clarity and tone" },
-                ]}
+        <Container className="max-w-6xl overflow-hidden rounded-xl border border-[#d8dbe2] bg-[#f3f4f6] md:grid md:grid-cols-2">
+          <div className="flex min-h-[720px] flex-col border-b border-[#d8dbe2] md:border-b-0 md:border-r">
+            <VariablesBar
+              variables={variables}
+              onChange={setVariables}
+              className="shrink-0 border-b border-[#d8dbe2] !bg-[#f3f4f6]"
             />
-
-            <div className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/4 relative">
-                <div className="absolute top-2 right-2 ">
-                        <CopyCompiledButton blocks={blocks} />
-                </div>
-            <pre className="mt-4 whitespace-pre-wrap break-words">
-                {compiled.text || "← Start writing on the left"}
-            </pre>
-            </div>
-            {/* </div> */}
+            <PromptEditor
+              onChange={(_text, _blocks, segs) => setSegments(segs)}
+              className="min-h-0 flex-1 !bg-[#f3f4f6]"
+            />
+          </div>
+          <div className="min-h-[720px]">
+            <CompiledOutput
+              compiledPrompt={compiledText}
+              onRun={(prompt) => {
+                setRunOutput(prompt);
+                setIsRunDialogOpen(true);
+              }}
+              className="h-full !bg-[#f3f4f6]"
+            />
+          </div>
         </Container>
       </section>
+      <Dialog open={isRunDialogOpen} onOpenChange={setIsRunDialogOpen}>
+        <DialogContent className="sm:max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>Run Output</DialogTitle>
+            <DialogDescription>Compiled prompt output</DialogDescription>
+          </DialogHeader>
+          <pre className="max-h-[55vh] overflow-auto whitespace-pre-wrap rounded-md border bg-muted/30 p-4 text-sm">
+            {runOutput}
+          </pre>
+          <DialogFooter>
+            <Button type="button" onClick={() => setIsRunDialogOpen(false)}>
+              OK
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
-      
+
     </main>
     <SiteFooter />
   </div>)

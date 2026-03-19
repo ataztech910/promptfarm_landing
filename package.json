@@ -9,11 +9,12 @@
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "postinstall": "node scripts/patch-prompt-editor.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
-    "@promptfarm/prompt-editor": "^0.1.4",
+    "@promptfarm/prompt-editor": "^0.3.3",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-aspect-ratio": "^1.1.7",
