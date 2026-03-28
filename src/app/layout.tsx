@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/index.css";
 import Providers from "./providers";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "PromptFarm",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
