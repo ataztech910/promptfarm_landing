@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "packages": {
+    "@promptfarm/prompt-editor": {
+      "version": "0.4.7",
+      "signature": "f0e031869fe01874b234126c75ade3f5",
+      "file": true,
+      "replaced": "^0.3.3"
+    }
+  }
+}

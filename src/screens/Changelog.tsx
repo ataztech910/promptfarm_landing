@@ -1,4 +1,4 @@
-import { Container, SiteFooter, SiteHeader, CHANGELOG_URL, REPO_URL } from "@/components/SiteShell";
+import { Container, SiteFooter, CHANGELOG_URL, REPO_URL } from "@/components/SiteShell";
 
 const changelogLinks = [
   {
@@ -15,7 +15,6 @@ const changelogLinks = [
 
 const Changelog = () => (
   <div className="min-h-screen">
-    <SiteHeader />
     <main className="pt-24">
       <section className="border-b border-border py-20">
         <Container className="max-w-4xl">

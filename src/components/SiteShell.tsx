@@ -46,9 +46,8 @@ export const SiteHeader = () => (
           <span className="text-primary">Farm</span>
         </span>
       </Link>
-      <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-        {/* <Link href="/docs" className="hover:text-foreground transition-colors">Documentation</Link> */}
-        <Link href="/changelog" className="hover:text-foreground transition-colors">Changelog</Link>
+      <div className="md:flex items-center gap-8 text-sm text-muted-foreground">
+        <Link href="/editor" className="hover:text-foreground transition-colors">Editor <span className="text-primary font-mono-app text-xs">(demo)</span></Link>
         <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
       </div>
     </Container>
@@ -62,8 +61,8 @@ export const SiteFooter = () => (
         © 2026 PromptFarm. Built for the agentic era.
       </div>
       <div className="flex gap-6 text-text-tertiary text-xs font-mono-app">
-        <Link href="/changelog" className="hover:text-foreground transition-colors">Changelog</Link>
-        <a href={REPO_URL} target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">GitHub</a>
+        {/* <Link href="/changelog" className="hover:text-foreground transition-colors">Changelog</Link> */}
+        {/* <a href={REPO_URL} target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">GitHub</a> */}
         <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
       </div>
     </Container>

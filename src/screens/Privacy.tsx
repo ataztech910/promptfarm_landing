@@ -1,4 +1,4 @@
-import { Container, SiteFooter, SiteHeader, REPO_URL } from "@/components/SiteShell";
+import { Container, SiteFooter, REPO_URL } from "@/components/SiteShell";
 
 const sections = [
   {
@@ -25,7 +25,6 @@ const sections = [
 
 const Privacy = () => (
   <div className="min-h-screen">
-    <SiteHeader />
     <main className="pt-24">
       <section className="border-b border-border py-20">
         <Container className="max-w-4xl">

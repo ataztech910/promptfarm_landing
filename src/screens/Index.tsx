@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Share2, ShieldCheck, Database } from "lucide-react";
-import { Container, SiteFooter, SiteHeader } from "@/components/SiteShell";
+import { Container, SiteFooter } from "@/components/SiteShell";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -330,7 +330,6 @@ const FooterCTA = () => (
 
 const LandingPage = () => (
   <div className="min-h-screen">
-    <SiteHeader />
     <main>
       <Hero />
       <ProblemSection />

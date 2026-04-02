@@ -1,0 +1,38 @@
+{
+  "name": "@promptfarm/prompt-editor",
+  "version": "0.4.7",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && node_modules/.bin/tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "tsup --watch",
+    "dev:example": "cd example && npx vite",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "lucide-react": "^0.400.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@promptfarm/editor-core": "file:../editor-core",
+    "@tiptap/pm": "^3.20.4",
+    "@tiptap/react": "^3.20.4",
+    "@tiptap/starter-kit": "^3.20.4",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.5.0"
+  },
+  "license": "MIT",
+  "yalcSig": "f0e031869fe01874b234126c75ade3f5"
+}

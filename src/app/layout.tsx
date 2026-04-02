@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/index.css";
 import Providers from "./providers";
+import { SiteHeader } from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "PromptFarm",
@@ -17,8 +18,11 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <Providers>{children}</Providers>
+      <body suppressHydrationWarning>
+        <Providers>
+          <SiteHeader />
+          {children}
+        </Providers>
       </body>
     </html>
   );
