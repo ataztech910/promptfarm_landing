@@ -1,8 +1,5 @@
 import Link from "next/link";
 
-export const REPO_URL = "https://github.com/ataztech910/promptfarm";
-export const CHANGELOG_URL = "https://github.com/ataztech910/promptfarm/commits/master";
-
 export const Container = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <div className={`container ${className}`}>{children}</div>
 );
@@ -62,7 +59,6 @@ export const SiteFooter = () => (
       </div>
       <div className="flex gap-6 text-text-tertiary text-xs font-mono-app">
         {/* <Link href="/changelog" className="hover:text-foreground transition-colors">Changelog</Link> */}
-        {/* <a href={REPO_URL} target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">GitHub</a> */}
         <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
       </div>
     </Container>

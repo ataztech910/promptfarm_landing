@@ -1,15 +1,10 @@
-import { Container, SiteFooter, CHANGELOG_URL, REPO_URL } from "@/components/SiteShell";
+import { Container, SiteFooter } from "@/components/SiteShell";
 
 const changelogLinks = [
   {
-    title: "GitHub Repository",
-    href: REPO_URL,
-    description: "The public source of truth for PromptFarm while the product is still in early access.",
-  },
-  {
-    title: "Commit History",
-    href: CHANGELOG_URL,
-    description: "Track the latest public code changes directly in the repository timeline.",
+    title: "Product Updates",
+    href: "/changelog",
+    description: "Stay updated with the latest changes and improvements to PromptFarm.",
   },
 ];
 
@@ -23,7 +18,7 @@ const Changelog = () => (
             Public product updates, without the fluff.
           </h1>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            PromptFarm is still early. Until a full release-notes system ships, the public changelog lives in GitHub.
+            PromptFarm is still early. Until a full release-notes system ships, updates will be posted here.
           </p>
         </Container>
       </section>
@@ -60,7 +55,7 @@ const Changelog = () => (
             </div>
             <div className="rounded-xl border border-border bg-background/70 p-5">
               <p className="mb-2 text-sm font-medium text-foreground">Clear sources</p>
-              <p className="text-sm text-text-secondary">When updates are public, GitHub remains the canonical source.</p>
+              <p className="text-sm text-text-secondary">When updates are public, this page remains the canonical source.</p>
             </div>
           </div>
         </Container>

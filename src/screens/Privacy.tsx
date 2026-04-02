@@ -1,4 +1,4 @@
-import { Container, SiteFooter, REPO_URL } from "@/components/SiteShell";
+import { Container, SiteFooter } from "@/components/SiteShell";
 
 const sections = [
   {
@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: "Your choices",
-    body: "You can request that we update or delete your waitlist information. Until a dedicated support email is published, use the PromptFarm GitHub repository to reach us.",
+    body: "You can request that we update or delete your waitlist information. Contact us through our support channels.",
   },
 ];
 
@@ -55,16 +55,8 @@ const Privacy = () => (
         <Container className="max-w-4xl">
           <h2 className="mb-4 text-2xl font-semibold tracking-display">Contact</h2>
           <p className="max-w-2xl text-sm leading-7 text-text-secondary">
-            For privacy-related requests, contact PromptFarm through the public repository until a dedicated email address is published.
+            For privacy-related requests, contact PromptFarm through our support channels.
           </p>
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/15"
-          >
-            Open the GitHub repository
-          </a>
         </Container>
       </section>
     </main>
