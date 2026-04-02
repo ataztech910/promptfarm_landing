@@ -236,8 +236,8 @@ function appendToStepField(step: MutableParsedStep, field: StepFieldKey, line: s
 
 function parseStepHeader(text: string, level: 2 | 3): string | null {
   const pattern = level === 2
-    ? /^##\s+Step(?:\s+\d+)?(?:\s*[:\-]\s*(.*))?\s*$/i
-    : /^###\s+Step(?:\s+\d+)?(?:\s*[:\-]\s*(.*))?\s*$/i;
+    ? /^##\s+Step(?:\s+\d+)?(?:\s*[:-]\s*(.*))?\s*$/i
+    : /^###\s+Step(?:\s+\d+)?(?:\s*[:-]\s*(.*))?\s*$/i;
   const match = text.match(pattern);
   if (!match) return null;
   return (match[1] ?? "").trim();

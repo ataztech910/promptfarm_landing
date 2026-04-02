@@ -171,11 +171,12 @@ export function normalizeCompiledMcpId(value?: string | null): RuntimeMcpId | nu
 }
 
 export function createRuntimeMcpRegistry(
-  env: NodeJS.ProcessEnv = typeof process === "undefined" ? {} : process.env
+  env?: NodeJS.ProcessEnv
 ): RuntimeMcpRegistry {
+  const effectiveEnv: NodeJS.ProcessEnv = env ?? (typeof process === "undefined" ? ({} as NodeJS.ProcessEnv) : process.env);
   const registry = {} as RuntimeMcpRegistry;
   for (const id of CANONICAL_RUNTIME_MCP_IDS) {
-    const { toolset, reason } = resolveRuntimeToolset(id, env);
+    const { toolset, reason } = resolveRuntimeToolset(id, env as unknown as NodeJS.ProcessEnv);
     registry[id] = {
       id,
       label: RUNTIME_MCP_LABELS[id],
